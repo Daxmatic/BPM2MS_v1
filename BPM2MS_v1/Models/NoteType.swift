@@ -12,7 +12,7 @@
  */
 import Foundation
 
-var bpms = 128.0
+var bpms = 120.0
 enum NoteType {
 
     case half, halfDot, halfTriplet, quarter, quarterDot, quarterTriplet, eight, eightDot, eightTriplet, sixt, sixtDot, sixtTriplet, thirtysecond, thirtysecondDot, thirtysecondTriplet, sixtyfourth, sixtyfourthDot, sixtyfourthTriplet
