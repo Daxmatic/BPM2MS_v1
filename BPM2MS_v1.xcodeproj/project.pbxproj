@@ -22,6 +22,7 @@
 		5F5600ED2928774D0079AD70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5F5600EF2928774D0079AD70 /* BPM2MS_v1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BPM2MS_v1.entitlements; sourceTree = "<group>"; };
 		5F5600F5292885190079AD70 /* NoteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteType.swift; sourceTree = "<group>"; };
+		5FA7B470292990FE009BB2B8 /* BPM2MS-v1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BPM2MS-v1-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		5F5600E52928774C0079AD70 /* BPM2MS_v1 */ = {
 			isa = PBXGroup;
 			children = (
+				5FA7B470292990FE009BB2B8 /* BPM2MS-v1-Info.plist */,
 				5F5600E62928774C0079AD70 /* BPM2MS_v1App.swift */,
 				5F5600E82928774C0079AD70 /* ContentView.swift */,
 				5FC9368F292888FA0053CA39 /* Models */,
@@ -303,6 +305,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BPM2MS-v1-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Tempo BPM to MS";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -339,6 +342,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BPM2MS-v1-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Tempo BPM to MS";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
