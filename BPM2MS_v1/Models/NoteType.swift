@@ -13,7 +13,7 @@
 import SwiftUI
 
 enum NoteType {
-    
+        
     case half(bpm: Double)
     case halfDot(bpm: Double)
     case halfTriplet(bpm: Double)
