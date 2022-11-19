@@ -10,7 +10,7 @@ import SwiftUI
 @available(macOS 13.0, *)
 struct ContentView: View {
     @State private var value = 0
-    let bpms = Array(128...180)
+    let bpms = Array(90...180)
     
     func incrementStep() {
         value += 1
