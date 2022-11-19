@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var value = 0
+    let bpms = Array(120...180)
+    
+    func incrementStep() {
+        value += 1
+        if value >= bpms.count { value = 0 }
+    }
+    
+    func decrementStep() {
+        value -= 1
+        if value < 0 { value = bpms.count - 1 }
+    }
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Spacer()
+            VStack {
+                Stepper("bpm: \(bpms[value].description)", onIncrement: incrementStep, onDecrement: decrementStep)
+             
+            }
+            .padding(50)
         }
-        .padding()
     }
 }
 
