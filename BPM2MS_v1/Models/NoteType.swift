@@ -12,7 +12,6 @@
  */
 import SwiftUI
 
-//var bpm = 120.0
 enum NoteType {
     
     case half(bpm: Double)

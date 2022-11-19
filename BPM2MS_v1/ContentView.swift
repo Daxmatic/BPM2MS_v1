@@ -26,7 +26,7 @@ struct ContentView: View {
             HStack {
                 Stepper("bpm:  \(bpms[value].description)  ", onIncrement: incrementStep, onDecrement: decrementStep)
                     .padding(25)
-                Text(verbatim: "bla \(NoteType.sixt(bpm: Double(bpms[value])))")
+                Text("\(NoteType.sixt(bpm: Double(bpms[value])).description)")
             }
             .padding(50)
         }
