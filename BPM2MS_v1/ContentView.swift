@@ -21,11 +21,11 @@ struct ContentView: View {
         if value < 0 { value = bpms.count - 1 }
     }
     var body: some View {
-        ZStack {
+        VStack {
             Spacer()
-            VStack {
-                Stepper("bpm: \(bpms[value].description)", onIncrement: incrementStep, onDecrement: decrementStep)
-             
+            HStack {
+                Stepper("bpm:  \(bpms[value].description)  ", onIncrement: incrementStep, onDecrement: decrementStep)
+                    .padding(25)
             }
             .padding(50)
         }
