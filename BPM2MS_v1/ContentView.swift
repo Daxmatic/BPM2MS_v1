@@ -25,11 +25,11 @@ struct ContentView: View {
         //let ml = NoteType.half(bpm: Double(bpms[value]))//.description
         ZStack {
             HStack {
-                Stepper("bpm:  \(bpms[value].description)  ", onIncrement: incrementStep, onDecrement: decrementStep)
+                Stepper("BPM:  \(bpms[value].description)  ", onIncrement: incrementStep, onDecrement: decrementStep)
                     .padding(12)
-                    .pickerStyle(.inline)
+                    .pickerStyle(.automatic)
                     .fixedSize()
-                    .buttonStyle(.bordered)
+                    .buttonStyle(.borderedProminent)
                     .font(.largeTitle)
                 Spacer()
                 List {
