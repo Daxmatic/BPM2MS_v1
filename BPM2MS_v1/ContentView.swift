@@ -22,7 +22,7 @@ struct ContentView: View {
         if value < 0 { value = bpms.count - 1 }
     }
     var body: some View {
-    //    let ml = NoteType.self
+        let ml = NoteType.half(bpm: Double(bpms[value])).description
         //let half = String(format: "%.2f", arguments: NoteType.half(bpm: Double(bpms[value])))
         ZStack {
             VStack {
@@ -34,6 +34,7 @@ struct ContentView: View {
                     .font(.largeTitle)
                 Spacer()
                 List {
+                    Text(String(format: "%.2f",ml))
                     Text("2th S: \(NoteType.half(bpm: Double(bpms[value])).description)")
                     Text("4th S: \(NoteType.quarter(bpm: Double(bpms[value])).description)")
                     Text("8th S: \(NoteType.eight(bpm: Double(bpms[value])).description)")
