@@ -5,11 +5,6 @@
 //  Created by Dax Hoes on 19/11/22.
 //
 
-/*
- case whole
- case wholeDot
- case wholeTriplet
- */
 import SwiftUI
 
 enum NoteType {
@@ -36,11 +31,12 @@ enum NoteType {
     var description: Double {
         switch self {
             case let .half(bpm):
+                //let half = String(format: "%.2f", arguments: .half)
                 return 60000 / bpm * 2
             case let .halfDot(bpm):
                 return 60000 / bpm * 3
             case let .halfTriplet(bpm):
-                return 60000 / bpm * 2 * 2
+                return 60000 / bpm * 2 * 2 / 3
             case let .quarter(bpm):
                 return 60000 / bpm * 1000
             case let .quarterDot(bpm):

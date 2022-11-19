@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(macOS 13.0, *)
 struct ContentView: View {
     @State private var value = 0
     let bpms = Array(128...180)
@@ -22,7 +23,7 @@ struct ContentView: View {
     }
     var body: some View {
     //    let ml = NoteType.self
-        
+        //let half = String(format: "%.2f", arguments: NoteType.half(bpm: Double(bpms[value])))
         ZStack {
             VStack {
                 Stepper("bpm:  \(bpms[value].description)  ", onIncrement: incrementStep, onDecrement: decrementStep)
@@ -57,11 +58,11 @@ struct ContentView: View {
                     Text("64th T: \(NoteType.sixtyfourthTriplet(bpm: Double(bpms[value])).description)")
                 }
             }
-            //.padding(50)
         }
     }
 }
 
+@available(macOS 13.0, *)
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
