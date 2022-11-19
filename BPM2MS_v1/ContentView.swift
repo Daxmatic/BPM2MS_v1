@@ -42,6 +42,8 @@ struct ContentView: View {
                     Text("32th:  \(String(format: "%.2f %.0f",NoteType.thirtysecond(bpm: Double(bpms[value])).description).deletingSuffix(" 0"))")
                     Text("64th:  \(String(format: "%.2f %.0f",NoteType.sixtyfourth(bpm: Double(bpms[value])).description).deletingSuffix(" 0"))")
                 }
+                .font(.caption)
+                .listStyle(.bordered(alternatesRowBackgrounds: true))
                 List {
                     Text("Dotted").foregroundColor(.blue)
                     Text("2th:   \(String(format: "%.2f %.0f",NoteType.halfDot(bpm: Double(bpms[value])).description).deletingSuffix(" 0"))")
@@ -51,6 +53,8 @@ struct ContentView: View {
                     Text("32th:  \(String(format: "%.2f %.0f",NoteType.thirtysecondDot(bpm: Double(bpms[value])).description).deletingSuffix(" 0"))")
                     Text("64th:  \(String(format: "%.2f %.0f",NoteType.sixtyfourthDot(bpm: Double(bpms[value])).description).deletingSuffix(" 0"))")
                 }
+                .font(.caption)
+                .listStyle(.bordered(alternatesRowBackgrounds: true))
                 List {
                     Text("Triplets").foregroundColor(.blue)
                     Text("2th:   \(String(format: "%.2f %.0f",NoteType.halfTriplet(bpm: Double(bpms[value])).description).deletingSuffix(" 0"))")
@@ -60,6 +64,8 @@ struct ContentView: View {
                     Text("32th:  \(String(format: "%.2f %.0f",NoteType.thirtysecondTriplet(bpm: Double(bpms[value])).description).deletingSuffix(" 0"))")
                     Text("64th:  \(String(format: "%.2f %.0f",NoteType.sixtyfourthTriplet(bpm: Double(bpms[value])).description).deletingSuffix(" 0"))")
                 }
+                .font(.caption)
+                .listStyle(.bordered(alternatesRowBackgrounds: true))
             }
         }
     }
