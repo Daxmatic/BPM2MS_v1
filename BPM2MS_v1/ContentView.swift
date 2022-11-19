@@ -21,12 +21,16 @@ struct ContentView: View {
         if value < 0 { value = bpms.count - 1 }
     }
     var body: some View {
-        VStack {
-            Spacer()
-            HStack {
+        ZStack {
+            VStack {
                 Stepper("bpm:  \(bpms[value].description)  ", onIncrement: incrementStep, onDecrement: decrementStep)
                     .padding(25)
-                Text("\(NoteType.sixt(bpm: Double(bpms[value])).description)")
+                    .pickerStyle(.radioGroup)
+                    .font(.largeTitle)
+                Spacer()
+                    Text("16th S: \(NoteType.sixt(bpm: Double(bpms[value])).description)")
+                    Text("16th D: \(NoteType.sixtDot(bpm: Double(bpms[value])).description)")
+                    Text("16th T: \(NoteType.sixtTriplet(bpm: Double(bpms[value])).description)")
             }
             .padding(50)
         }
