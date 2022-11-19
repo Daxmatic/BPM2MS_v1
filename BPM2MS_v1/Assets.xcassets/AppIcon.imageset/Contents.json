@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bpmicon.png",
+      "filename" : "bpmicon@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bpmicon 1.png",
+      "filename" : "bpmicon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bpmicon 2.png",
+      "filename" : "bpmicon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
