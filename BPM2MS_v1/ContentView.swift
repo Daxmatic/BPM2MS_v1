@@ -22,7 +22,6 @@ struct ContentView: View {
         if value < 0 { value = bpms.count - 1 }
     }
     var body: some View {
-        //let ml = NoteType.half(bpm: Double(bpms[value]))//.description
         ZStack {
             HStack {
                 Stepper("BPM:  \(bpms[value].description)  ", onIncrement: incrementStep, onDecrement: decrementStep)
@@ -33,7 +32,6 @@ struct ContentView: View {
                     .font(.largeTitle)
                 Spacer()
                 List {
-                    //Text(String(format: "%.2f %.0f", ml.description).deletingSuffix(" 0"))
                     Text("Straight").foregroundColor(.blue)
                     Text("2th:   \(String(format: "%.2f %.0f",NoteType.half(bpm: Double(bpms[value])).description).deletingSuffix(" 0"))")
                     Text("4th:   \(String(format: "%.2f %.0f",NoteType.quarter(bpm: Double(bpms[value])).description).deletingSuffix(" 0"))")
