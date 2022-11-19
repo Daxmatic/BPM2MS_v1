@@ -10,51 +10,68 @@
  case wholeDot
  case wholeTriplet
  */
-import Foundation
+import SwiftUI
 
-var bpms = 120.0
+//var bpm = 120.0
 enum NoteType {
-
-    case half, halfDot, halfTriplet, quarter, quarterDot, quarterTriplet, eight, eightDot, eightTriplet, sixt, sixtDot, sixtTriplet, thirtysecond, thirtysecondDot, thirtysecondTriplet, sixtyfourth, sixtyfourthDot, sixtyfourthTriplet
- 
+    
+    case half(bpm: Double)
+    case halfDot(bpm: Double)
+    case halfTriplet(bpm: Double)
+    case quarter(bpm: Double)
+    case quarterDot(bpm: Double)
+    case quarterTriplet(bpm: Double)
+    case eight(bpm: Double)
+    case eightDot(bpm: Double)
+    case eightTriplet(bpm: Double)
+    case sixt(bpm: Double)
+    case sixtDot(bpm: Double)
+    case sixtTriplet(bpm: Double)
+    case thirtysecond(bpm: Double)
+    case thirtysecondDot(bpm: Double)
+    case thirtysecondTriplet(bpm: Double)
+    case sixtyfourth(bpm: Double)
+    case sixtyfourthDot(bpm: Double)
+    case sixtyfourthTriplet(bpm: Double)
+    
     var description: Double {
         switch self {
-            case .half:
-                return 60000 / bpms * 2
-            case .halfDot:
-                return 60000 / bpms * 3
-            case .halfTriplet:
-                return 60000 / bpms * 2 * 2
-            case .quarter:
-                return 60000 / bpms * 1000
-            case .quarterDot:
-                return 60000 / bpms / 2 * 3
-            case .quarterTriplet:
-                return 60000 / bpms * 2 / 3
-            case .eight:
-                return 60000 / bpms / 2
-            case .eightDot:
-                return 60000 / bpms / 4 * 3
-            case .eightTriplet:
-                return 60000 / bpms / 3
-            case .sixt:
-                return 60000 / bpms / 4
-            case .sixtDot:
-                return 60000 / bpms / 4 * 1.5
-            case .sixtTriplet:
-                return 60000 / bpms / 6
-            case .thirtysecond:
-                return 60000 / bpms / 8
-            case .thirtysecondDot:
-                return 60000 / bpms / 8 * 1.5
-            case .thirtysecondTriplet:
-                return 60000 / bpms / 8 * 2 / 3
-            case .sixtyfourth:
-                return 60000 / bpms / 16
-            case .sixtyfourthDot:
-                return 60000 / bpms / 16 * 1.5
-            case .sixtyfourthTriplet:
-                return 60000 / bpms / 16 * 2 / 3
+            case let .half(bpm):
+                return 60000 / bpm * 2
+            case let .halfDot(bpm):
+                return 60000 / bpm * 3
+            case let .halfTriplet(bpm):
+                return 60000 / bpm * 2 * 2
+            case let .quarter(bpm):
+                return 60000 / bpm * 1000
+            case let .quarterDot(bpm):
+                return 60000 / bpm / 2 * 3
+            case let .quarterTriplet(bpm):
+                return 60000 / bpm * 2 / 3
+            case let .eight(bpm):
+                return 60000 / bpm / 2
+            case let .eightDot(bpm):
+                return 60000 / bpm / 4 * 3
+            case let .eightTriplet(bpm):
+                return 60000 / bpm / 3
+            case let .sixt(bpm):
+                return 60000 / bpm / 4
+            case let .sixtDot(bpm):
+                return 60000 / bpm / 4 * 1.5
+            case let .sixtTriplet(bpm):
+                return 60000 / bpm / 6
+            case let .thirtysecond(bpm):
+                return 60000 / bpm / 8
+            case let .thirtysecondDot(bpm):
+                return 60000 / bpm / 8 * 1.5
+            case let .thirtysecondTriplet(bpm):
+                return 60000 / bpm / 8 * 2 / 3
+            case let .sixtyfourth(bpm):
+                return 60000 / bpm / 16
+            case let .sixtyfourthDot(bpm):
+                return 60000 / bpm / 16 * 1.5
+            case let .sixtyfourthTriplet(bpm):
+                return 60000 / bpm / 16 * 2 / 3
         }
     }
 }
