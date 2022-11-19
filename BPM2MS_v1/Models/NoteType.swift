@@ -37,7 +37,7 @@ enum NoteType {
             case let .halfTriplet(bpm):
                 return 60000 / bpm * 2 * 2 / 3
             case let .quarter(bpm):
-                return 60000 / bpm * 1000
+                return 60000 / bpm * 1000 / 1000
             case let .quarterDot(bpm):
                 return 60000 / bpm / 2 * 3
             case let .quarterTriplet(bpm):
@@ -67,5 +67,19 @@ enum NoteType {
             case let .sixtyfourthTriplet(bpm):
                 return 60000 / bpm / 16 * 2 / 3
         }
+    }
+}
+
+extension String {
+        // remove a prefix if it exists
+    func deletingPrefix(_ prefix: String) -> String {
+        guard self.hasPrefix(prefix) else { return self }
+        return String(self.dropFirst(prefix.count))
+    }
+    
+        // remove a suffix if it exists
+    func deletingSuffix(_ suffix: String) -> String {
+        guard self.hasSuffix(suffix) else { return self }
+        return String(self.dropLast(suffix.count))
     }
 }
