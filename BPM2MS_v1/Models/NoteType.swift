@@ -31,7 +31,6 @@ enum NoteType {
     var description: Double {
         switch self {
             case let .half(bpm):
-                //let half = String(format: "%.2f", arguments: .half)
                 return 60000 / bpm * 2
             case let .halfDot(bpm):
                 return 60000 / bpm * 3
